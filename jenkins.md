@@ -1,5 +1,5 @@
 #!groovy
-// Check ub1 properties
+// Check devops properties
 properties([disableConcurrentBuilds()])
 
 pipeline {
@@ -13,12 +13,12 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh root@ub1 \'hostname\''
+                sh 'ssh root@devops \'hostname\''
             }
         }
         stage("Second step") {
             steps {
-                sh 'ssh root@ub1 \'uptime\''
+                sh 'ssh root@devops\'uptime\''
             }
         }
     }
